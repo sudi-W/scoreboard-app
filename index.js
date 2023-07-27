@@ -1,22 +1,26 @@
+// Use an object to store the scores for 'home' and 'away' teams separately
+let scores = {
+  home: 0,
+  away: 0
+};
+
 const homeEl = document.getElementById('home-score');
 const awayEl = document.getElementById('away-score');
-let score = 0;
 
 function addToScore(team, points) {
-  if (team === 'home') {
-    score += points;
-    homeEl.textContent = `Score: ${score}`;
-  } else if (team === 'away') {
-    score += points;
-    awayEl.textContent = `Score: ${score}`;
-  }
+  // Update the score for the specified team
+  scores[team] += points;
+
+  // Update the score display for both 'home' and 'away'
+  homeEl.textContent = `Score: ${scores.home}`;
+  awayEl.textContent = `Score: ${scores.away}`;
 }
 
 function resetScore(team) {
-  score = 0;
-  if (team === 'home') {
-    homeEl.textContent = `Score: ${score}`;
-  } else if (team === 'away') {
-    awayEl.textContent = `Score: ${score}`;
-  }
+  // Reset the score for the specified team
+  scores[team] = 0;
+
+  // Update the score display for both 'home' and 'away'
+  homeEl.textContent = `Score: ${scores.home}`;
+  awayEl.textContent = `Score: ${scores.away}`;
 }
