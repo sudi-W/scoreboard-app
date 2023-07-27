@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Game Scoreboard</h1>
+        <div class="score-section">
+            <div>
+                <h3>HOME</h3>
+                <div>
+                    <h4 id="home-score">Score: 0</h4>
+                    <button onclick="addToScore('home', 1)">+1</button>
+                    <button onclick="addToScore('home', 2)">+2</button>
+                    <button onclick="addToScore('home', 3)">+3</button>
+                </div>
+                <div>
+                    <button onclick="resetScore('home')">Reset</button>
+                </div>
+            </div>
+            <div>
+                <h3>GUEST</h3>
+                <div>
+                    <h4 id="guest-score">Score: 0</h4>
+                    <button onclick="addToScore('guest', 1)">+1</button>
+                    <button onclick="addToScore('guest', 2)">+2</button>
+                    <button onclick="addToScore('guest', 3)">+3</button>
+                </div>
+                <div>
+                    <button onclick="resetScore('guest')">Reset</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
+
+
